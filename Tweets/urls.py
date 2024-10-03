@@ -19,5 +19,4 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-# added some content for git learning
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
