@@ -13,3 +13,14 @@ class Tweet(models.Model):
 
     def __str__(self):
         return f'{self.user.username} - {self.text[:10]}'
+    
+
+
+
+class Recipe(models.Model):
+    recipe_name = models.CharField(max_length=50)
+    recipe_description = models.TextField()
+    recipe_image = models.ImageField(upload_to= "images")
+
+    def __str__(self):
+        return self.recipe_name
